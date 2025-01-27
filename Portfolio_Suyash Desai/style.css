@@ -1,0 +1,1619 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+/* styling navigation bar starts*/
+
+.navbar {
+    font-family: "Poppins", sans-serif;
+    z-index: 10;
+    background-color: #e11111;
+    
+    color: #020120;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    justify-content: space-evenly;
+}
+
+.navbar .logo-container {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    margin-left: 5rem;
+    justify-content: space-evenly;
+}
+
+.navbar .logo-container #logo {
+    height: 2rem;
+    cursor: pointer;
+}
+
+.navbar .logo-container .logo-name {
+    margin-left: 0rem;
+}
+
+.navbar .logo-container svg,
+.navbar .logo-container .logo-name {
+    transition: color 0.7s ease;
+}
+
+.navbar .logo-container:hover svg,
+.navbar .logo-container:hover .logo-name {
+    color: #FFC72C !important;
+}
+
+
+.navbar .navbar-nav {
+    margin-left: 0%;
+    margin-right: 5rem;
+    font-weight: bold;
+}
+
+.navbar .navbar-nav a {
+    position: relative;
+    display: inline-block;
+    margin-right: 1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .navbar-nav a:hover,
+.navbar .navbar-nav a.active {
+    color: #f01111dd;
+    transform: translateY(-5px);
+}
+
+.navbar-nav a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    /* background-color: #0000FF; */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav a:hover::after,
+.navbar-nav a.active::after {
+    transform: scaleX(1);
+}
+
+/* styling navigation bar ends */
+
+
+/* styling home section starts */
+.home-container {
+    position: relative;
+    top: 0;
+    min-height: 90vh;
+    /* height: 100vh;
+    width: 100vw; */
+    overflow: hidden;
+    background:pink;
+    background-image:url("https://www.discoverengineering.org/wp-content/uploads/2023/12/mj_11334_4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 270px;
+    font-family: "Poppins", sans-serif;
+    
+        font-size: 48px;
+        font-weight: bold;
+        color: white; /* Fill color */
+        text-shadow: 
+          -2px -2px 0 #000, /* Top-left shadow */
+           2px -2px 0 #000, /* Top-right shadow */
+          -2px  2px 0 #000, /* Bottom-left shadow */
+           2px  2px 0 #000; /* Bottom-right shadow */
+      
+}
+
+.particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.home-container img {
+    position:fixed;
+    right: 0%;
+    top: 8rem;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.home-container hero {
+   margin-right: 0%;
+}
+
+.home-container .content {
+    position: relative;
+    top: 15rem;
+    left: 7rem;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    z-index: 1;
+}
+
+.home-container .content h2 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #ffd900;
+}
+
+.home-container .content span {
+    color: #ff7b00;
+}
+
+.home-container .content p {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.home-container .typing-text,
+.home-container .typed-cursor {
+    color: #fbf2f2 !important;
+    font-size: 30px;
+    font-weight: 700;
+    justify-content: center;
+}
+
+.home-container .content #abt-me {
+    text-decoration: none;
+    background: blue;
+    height: 45px;
+    width: 150px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-container .content #abt-me:hover {
+    background: rgb(37, 6, 173);
+    transition: 0.3s ease;
+}
+
+.home-container .content a span {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.home-container .content .socials {
+    position: relative;
+    margin-top: 30px;
+}
+
+.home-container .content .social-icons {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+    list-style: none;
+}
+
+.home-container .content .social-icons li a {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    color: inherit;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: #E1D9D1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+.home-container .content .social-icons li a:hover {
+    color: #0000FF;
+}
+
+.home-container .content .social-icons li a i {
+    font-size: 1.5rem;
+}
+
+/* styling home section ends */
+
+
+/* styling about me section starts */
+.about-me-container {
+    text-align: center;
+    min-height: 90vh;
+    background: #e5ecfb;
+}
+
+.about-me-container>p:nth-child(1) {
+    font-size: 35px;
+    font-weight: 800;
+    padding: 10px;
+}
+
+.about-me-container span {
+    color: #7303a7;
+}
+
+.about-me-container .photo-info-container {
+    display:inline;
+    /* grid-template-columns: 1fr 1.5fr; */
+    max-width: 80%;
+    margin-top:0% ;
+    gap: 0px;
+    position: absolute;
+}
+
+.about-me-container .photo-info-container .photo img {
+  
+   
+    height: 200px;
+    width: 100%;
+    position: relative;
+    transform: translateY(-80px);
+    border-radius: 50%;
+    margin-left: 2%;
+}
+
+
+.about-me-container .info p {
+    text-align: left;
+}
+
+.about-me-container .info>p:nth-child(1) {
+    font-size: 25px;
+    font-weight: 750;
+    margin-bottom: 0;
+}
+
+.about-me-container .info>p:nth-child(2) {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.about-me-container .info>p:nth-child(3),
+.about-me-container .info>p:nth-child(4),
+.about-me-container .info>p:nth-child(5) {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.about-me-container .info a {
+    text-decoration: none;
+    color: black;
+}
+
+.about-me-container .photo-info-container .info {
+    display: grid;
+}
+
+.about-me-container .photo-info-container .info .resume {
+    justify-self: start;
+    padding: 8px 17px;
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(21, 1, 1);
+    border-radius: 5px;
+    background: rgb(231, 209, 7);
+    transform: translateY(-13px);
+    margin-left: 0%;
+}
+
+.about-me-container .info .resume:hover {
+    background: rgb(246, 254, 12);
+    color: rgb(13, 13, 9);
+    transition: 0.3s;
+   
+}
+
+.about-me-container .info .email:hover {
+    color: #0000FF;
+}
+
+/* styling about me section ends */
+
+/* # Skills */
+
+.skill-icon {
+    margin-right: 10px;
+    color: #ff5722; /* Customize icon color */
+    font-size: 1.8rem; /* Adjust size */
+    vertical-align: middle;
+  }
+  .progress .skill {
+    display: flex;
+    align-items: center;
+  }
+  
+.skills .progress {
+    height: 50px;
+    display: block;
+    background: none;
+    border-radius: 0;
+  }
+  
+  .skills .progress .skill {
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #00060f;
+  }
+  
+  .skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+  }
+  
+  .skills .progress-bar-wrap {
+    background: #f3f3f3;
+  }
+  
+  .skills .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: #4df10c;
+  }
+/* styling skills section starts */
+.skills-container {
+    min-height: 90vh;
+    background: papayawhip;
+    padding-bottom: 20px;
+    
+}
+
+.skills-container p {
+    font-family: "Poppins";
+    font-size: 35px;
+    font-weight: 800;
+    color: rgb(9, 0, 0);
+    text-align: center;
+    padding: 20px;
+}
+
+.skills-container span {
+    color: #ffe600;
+}
+
+.skills-container .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    background-color: rgba(0, 0, 22, 0.4);
+    width: 60%;
+    margin: auto;
+    border-radius: 1rem;
+    padding: 20px;
+}
+
+.skills-container .grid .skill {
+    background-color: rgba(0, 0, 22, 0.8);
+    padding: 10px;
+    border-radius: 1rem;
+}
+
+.skills-container .grid .skill:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: .5s ease;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.skills-container .grid .skill .indiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-container .grid .skill .indiv span {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+
+/* styling skills section ends */
+
+
+/* styling education section starts */
+
+.education-box {
+    max-width: 300px; /* Set a smaller width */
+    padding: 10px; /* Reduce padding inside the box */
+    margin: 10px auto; /* Adjust margin for spacing */
+    font-size: 14px; /* Reduce font size if necessary */
+    line-height: 1.5; /* Adjust line height */
+    border: 1px solid #ddd; /* Optional: adjust border */
+    border-radius: 5px; /* Optional: adjust corner radius */
+    background-color: #f9f9f9; /* Optional: background color */
+}
+
+.education-box h3 {
+    font-size: 16px; /* Smaller font size for headings */
+    margin-bottom: 5px; /* Reduce spacing below headings */
+}
+
+.education-box p {
+    font-size: 12px; /* Smaller font size for paragraph text */
+    margin-bottom: 5px; /* Reduce paragraph spacing */
+}
+
+
+.education-container {
+    max-height: 800vh;
+    background-color: #045492d2;
+    /* background-image: url("https://static.vecteezy.com/system/resources/previews/016/330/431/non_2x/education-logo-collection-free-vector.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.education-container .header {
+    font-family: "Poppins";
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 0;
+    color:rgb(242, 255, 0);
+}
+
+.education-container span {
+    color: #7303a7;
+}
+
+.education-container .motive {
+    font-family: "Poppins";
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.education-container .clg {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    border:solid;
+    background:linear-gradient(rgb(241, 96, 241),yellow);
+    /* background-image: url("education.jpg"); */
+}
+
+
+
+.education-container .clg img {
+    height: 225px;
+    width: 550px;
+    /* transform: translateY(30px); */
+    transform: translateX(30px);
+    transform: translateY(30px);
+    border-style:solid
+
+}
+
+.education-container .clg2 {
+    margin-top: 30px;
+    background:linear-gradient(rgb(241, 96, 241),yellow);
+    /* background-image: url("sgm1.jpg" ); */
+}
+
+.education-container .clg .card-text {
+    text-align: left;
+    font-size: 20px;
+}
+
+.education-container .clg .card-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.education-container .card-text {
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: left;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+.education-container .dur {
+    font-size: 25px;
+    font-weight: 700;
+    color: #226d00;
+}
+
+/* styling education section ends */
+
+/* internship Section */
+#internship {
+    padding: 40px 20px;
+    background: hsl(203, 30%, 76%);
+    justify-content: none;
+}
+
+/* .internship-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+} */
+
+.internship {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+    border: 2px dotted #140101;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.internship h3 {
+    margin-top: 0;
+}
+
+
+
+/* styling projects section starts */
+.projects-container {
+    min-height: 95vh;
+    background: linear-gradient(to bottom, #6a025b, #3a035a);
+    font-family: "Poppins", sans-serif;
+}
+
+.projects-container h2 {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-weight: 800;
+    padding: 1rem;
+}
+
+.projects-container h2 span {
+    color: #ffe600;
+}
+
+.projects-container .allcards {
+    min-width: 60vw;
+    margin: auto;
+    padding: 10px;
+    gap: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.projects-container .allcards .indiv-cards {
+    height: 270px;
+    width: 400px;
+    overflow: hidden;
+    border-radius: .5rem;
+}
+
+.projects-container .allcards .indiv-cards img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.projects-container .allcards .indiv-cards .text-cont {
+    position: relative;
+    height: 100%;
+    top: -16%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.8);
+    justify-content: left;
+}
+
+.projects-container .allcards .indiv-cards .text-cont h3 {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #ffe600;
+    padding: 10px;
+}
+
+.projects-container .allcards .indiv-cards .text-cont .desc p {
+    font-family: "Poppins";
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+.projects-container .allcards .indiv-cards .text-cont a {
+    color: white;
+    font-family: "Poppins";
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    background-color: black;
+    align-self: center;
+    padding: 10px 15px;
+    border-radius: 0.5rem;
+}
+
+.projects-container .allcards .indiv-cards .text-cont a:hover {
+    background-color: #0000FF;
+    transition: background-color 0.5s ease;
+}
+
+.projects-container .allcards .indiv-cards:hover .text-cont {
+    top: -85%;
+    transition: top 0.5s ease;
+}
+
+.projects-container .allcards .indiv-cards:hover .text-cont a {
+    margin-bottom: 10px;
+}
+
+/* styling projects section ends */
+
+
+/* styling get in touch section starts */
+.get-in-touch-container {
+    min-height: 90vh;
+    background: #e5ecfb;
+}
+
+.get-in-touch-container h2 {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+    padding: 20px;
+}
+
+.get-in-touch-container h2 span {
+    color: #7303a7;
+}
+
+.get-in-touch-container .fset {
+    display: flex;
+    min-height: 65vh;
+    max-width: 70vw;
+    margin: auto;
+    justify-content: space-around;
+    background: white;
+    padding: 30px;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.get-in-touch-container .fset .img-box {
+    height: 400px;
+    width: 595px;
+    overflow: hidden;
+}
+
+.get-in-touch-container .fset .img-box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.get-in-touch-container .fset form {
+    width: 40%;
+}
+
+.get-in-touch-container .fset form .field {
+    height: 50px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin: 1rem;
+}
+
+.get-in-touch-container .fset form .message {
+    width: 100%;
+    height: 130px;
+    margin: 1rem;
+    display: flex;
+    position: relative;
+}
+
+.get-in-touch-container .fset form .field i {
+    position: absolute;
+    top: 90%;
+    left: 18px;
+    color: rgb(51, 51, 51);
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.get-in-touch-container .fset form .message i {
+    position: absolute;
+    top: 24%;
+    left: 20px;
+}
+
+.get-in-touch-container .fset form .field input,
+.get-in-touch-container .fset form .message textarea {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-family: "Poppins";
+    padding: 0px 16px 0px 48px;
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 5px;
+    border-image: initial;
+    margin-top: 20px;
+    background: #e5ecfb;
+}
+
+.get-in-touch-container .fset form .message textarea {
+    padding: 5px 16px 0px 48px;
+    resize: none;
+}
+
+.get-in-touch-container .fset form input::placeholder {
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.get-in-touch-container .fset form .field input[type="text"]:focus,
+.get-in-touch-container .fset form .field input[type="email"]:focus,
+.get-in-touch-container .fset form .message textarea:focus {
+    border-width: 2px;
+    border-color: #7303a7;
+    outline: none;
+}
+
+.get-in-touch-container .fset form .field input[type="text"]:focus+i,
+.get-in-touch-container .fset form .field input[type="email"]:focus+i,
+.get-in-touch-container .fset form .message textarea:focus+i {
+    color: #7303a7;
+}
+
+.get-in-touch-container .fset form .submit {
+    display: flex;
+    float: right;
+    margin-top: 15px;
+}
+
+.get-in-touch-container .fset form .submit button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3rem;
+    box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+    font-family: "Poppins", sans-serif;
+    border-style: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    background: blue;
+}
+
+.get-in-touch-container .fset form .submit button i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.get-in-touch-container .fset form .submit button:hover {
+    background: rgb(37, 6, 173);
+    transition: 0.3s;
+
+}
+
+/* styling get in touch section ends */
+
+
+/* styling signature section starts */
+.signature-container {
+    background-color: #00012b;
+}
+
+.signature-container .boxes {
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    padding-top: 20px;
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.signature-container .boxes .box1 {
+    width: 25%;
+}
+
+.signature-container .boxes .box2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.signature-container .boxes .box2 a {
+    text-decoration: none;
+    color: white;
+    margin: 0.2rem;
+}
+
+.signature-container .boxes .box2 a:hover {
+    color: #ffe600;
+    transition: color .5s ease;
+}
+
+.signature-container .boxes h2 {
+    font-size: 25px;
+    font-weight: 400;
+    padding: 0 0 20px 0;
+}
+
+.signature-container .boxes p,
+.signature-container .boxes a {
+    font: "Poppins" sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    justify-content: center;
+}
+
+.signature-container .boxes p {
+    color: rgba(255, 255, 255, 0.692);
+}
+
+.signature-container .boxes .box3 i {
+    color: #ffe600;
+}
+
+.signature-container .boxes .box3 .socials {
+    position: relative;
+    margin-top: 20px;
+}
+
+.signature-container .boxes .box3 .socials .social-icons {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+    list-style: none;
+    align-items: center;
+}
+
+.signature-container .boxes .box3 .socials .social-icons li a {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    color: inherit;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: #E1D9D1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+.signature-container .boxes .box3 .socials .social-icons li a i {
+    position: relative;
+    color: black;
+    font-size: 1rem;
+}
+
+.signature-container .boxes .box3 .socials .social-icons li a:hover {
+    background: black;
+}
+
+.signature-container .boxes .box3 .socials .social-icons a:hover i {
+    color: #f9e600;
+    scale: 1.5;
+    transition: scale 0.5s ease;
+}
+
+.signature-container hr {
+    height: 10px;
+    width: 80%;
+    margin: 20px auto 0;
+    color: white;
+}
+
+.signature-container .last-p {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    padding: 10px;
+}
+
+
+/* Media queries */
+@media screen and (max-width: 1200px) {
+    .navbar .logo-container {
+        margin-left: 2rem;
+    }
+
+    .navbar .navbar-nav {
+        margin-right: 2rem;
+    }
+
+    .home-container {
+        min-height: 80vh;
+    }
+
+    .home-container img {
+        right: 8rem;
+        top: 6rem;
+        height: 18rem;
+    }
+
+    .home-container .content {
+        top: 10rem;
+        left: 5rem;
+    }
+
+    .home-container .content h2 {
+        font-size: 40px;
+    }
+
+    .home-container .content p {
+        font-size: 20px;
+    }
+
+    .about-me-container .photo-info-container {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        max-width: 80%;
+        margin: auto;
+        gap: 20px;
+    }
+
+    .about-me-container .photo-info-container .photo img {
+        position: relative;
+        top: 50px;
+        height: auto;
+        width: 100%;
+    }
+
+    .skills-container .grid {
+        width: 80%;
+    }
+
+    .skills-container .grid .skill {
+        padding: 8px;
+    }
+
+    .skills-container .grid .skill .indiv span {
+        font-size: 18px;
+    }
+
+    .education-container {
+        min-height: 75vh;
+        padding-bottom: 20px;
+    }
+
+    .education-container .clg {
+        width: 70%;
+        margin: auto;
+        margin-top: 45px;
+        border: none;
+    }
+
+    .education-container .clg .card-title {
+        font-family: "Poppins";
+        font-size: 23px;
+        font-weight: 600;
+    }
+
+    .education-container .card-text {
+        font-family: "Poppins";
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+
+    .education-container .dur {
+        font-size: 20px;
+        font-weight: 700;
+        color: #226d00;
+    }
+
+    .projects-container .allcards {
+        min-width: 60vw;
+        margin: auto;
+        padding-bottom: 25px;
+        gap: 1rem;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .about-me-container>p:nth-child(1),
+    .skills-container p,
+    .education-container .header,
+    .projects-container h2,
+    .get-in-touch-container h2 {
+        font-size: 33px;
+    }
+
+
+}
+
+
+/* Tablets (regular tablets and large phones) */
+@media screen and (max-width: 992px) {
+    .home-container img {
+        right: 5rem;
+        top: 5rem;
+        height: 15rem;
+    }
+
+    .home-container .content {
+        top: 8rem;
+        left: 4rem;
+    }
+
+    .home-container .content h2 {
+        font-size: 35px;
+    }
+
+    .home-container .content p {
+        font-size: 18px;
+    }
+
+    .home-container .content #abt-me {
+        text-decoration: none;
+        background: blue;
+        height: 40px;
+        width: 130px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-me-container .photo-info-container {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        max-width: 80%;
+        margin: auto;
+        gap: 20px;
+    }
+
+    .about-me-container .photo-info-container .photo img {
+        position: relative;
+        top: 85px;
+        height: auto;
+        width: 100%;
+    }
+
+    .skills-container {
+        min-height: 82vh;
+    }
+
+
+    .skills-container .grid {
+        width: 90%;
+    }
+
+    .skills-container .grid .skill {
+        padding: 6px;
+    }
+
+    .skills-container .grid .skill .indiv span {
+        font-size: 16px;
+    }
+
+    .education-container .card-text {
+        font-family: "Poppins";
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .education-container .clg .card-title {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .education-container .dur {
+        font-size: 18px;
+        font-weight: 700;
+        color: #226d00;
+    }
+
+    .get-in-touch-container .fset .img-box {
+        height: 376px;
+        width: 244px;
+        overflow: hidden;
+    }
+
+    .get-in-touch-container .fset form {
+        width: 45%;
+    }
+
+    .get-in-touch-container .fset {
+        display: flex;
+        min-height: 61vh;
+        max-width: 70vw;
+        margin: auto;
+        justify-content: space-around;
+        background: white;
+        padding: 20px;
+        border-radius: 1rem;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .about-me-container>p:nth-child(1),
+    .skills-container p,
+    .education-container .header,
+    .projects-container h2,
+    .get-in-touch-container h2 {
+        font-size: 30px;
+    }
+
+}
+
+
+/* Regular Smartphones */
+@media screen and (max-width: 768px) {
+
+    .navbar .navbar-nav {
+        margin-right: 2rem;
+        align-items: center;
+    }
+
+    .navbar-nav a::after {
+        content: none;
+    }
+
+
+    .home-container img {
+        right: 3rem;
+        top: 4rem;
+        height: 12rem;
+    }
+
+    .home-container .content {
+        top: 7rem;
+        left: 3rem;
+    }
+
+    .home-container .content h2 {
+        font-size: 30px;
+    }
+
+    .home-container .content p {
+        font-size: 16px;
+    }
+
+    .home-container .content #abt-me {
+        text-decoration: none;
+        background: blue;
+        height: 35px;
+        width: 120px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-container .content .social-icons li a {
+        position: relative;
+        height: 45px;
+        width: 45px;
+        color: inherit;
+        border-radius: 50%;
+        text-decoration: none;
+        background-color: #E1D9D1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.3s;
+    }
+
+    .about-me-container .photo-info-container .photo img {
+        position: static;
+        height: inherit;
+        max-width: 80%;
+        margin: auto;
+        display: block;
+    }
+
+    .about-me-container .photo-info-container .info .resume {
+        justify-self: center;
+        padding: 10px;
+        color: white;
+        border-radius: 5px;
+        background: blue;
+    }
+
+    .about-me-container .photo-info-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 70%;
+        margin: auto;
+        gap: 20px;
+        padding-bottom: 20px;
+    }
+
+    .skills-container .grid {
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-container .grid .skill {
+        padding: 5px;
+    }
+
+    .skills-container .grid .skill .indiv span {
+        font-size: 14px;
+    }
+
+    .education-container .clg .card-title {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .education-container .card-text {
+        font-family: "Poppins";
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .education-container .dur {
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .get-in-touch-container .fset {
+        display: flex;
+        min-height: 55vh;
+        max-width: 85vw;
+        margin: auto;
+        justify-content: space-around;
+        background: white;
+        padding: 20px;
+        border-radius: 1rem;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .get-in-touch-container .fset .img-box {
+        height: 315px;
+        width: 245px;
+        overflow: hidden;
+    }
+
+    .get-in-touch-container .fset form .field {
+        height: 40px;
+        display: flex;
+        position: relative;
+        width: 100%;
+        margin: 1rem;
+    }
+
+    .get-in-touch-container .fset form .message {
+        width: 100%;
+        height: 100px;
+        margin: 1rem;
+        display: flex;
+        position: relative;
+    }
+
+    .get-in-touch-container .fset form .field i {
+        position: absolute;
+        top: 100%;
+        left: 18px;
+        color: rgb(51, 51, 51);
+        font-size: 15px;
+        pointer-events: none;
+        transform: translateY(-50%);
+    }
+
+    .get-in-touch-container .fset form .message i {
+        position: absolute;
+        top: 30%;
+        font-size: 15px;
+        left: 20px;
+    }
+
+    .signature-container .boxes .box3 .socials .social-icons li a {
+        position: relative;
+        height: 35px;
+        width: 35px;
+        color: inherit;
+        border-radius: 50%;
+        text-decoration: none;
+        background-color: #E1D9D1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.3s;
+    }
+
+    .about-me-container>p:nth-child(1),
+    .skills-container p,
+    .education-container .header,
+    .projects-container h2,
+    .get-in-touch-container h2 {
+        font-size: 28px;
+    }
+
+    .navbar .logo-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+
+    .navbar-nav {
+        margin-left: auto;
+    }
+}
+
+/* Smartphones (small screens) */
+@media screen and (max-width: 576px) {
+    .navbar .logo-container {
+        margin-left: 1rem;
+    }
+
+    .navbar .navbar-nav {
+        margin-right: 1rem;
+    }
+
+    .home-container img {
+        right: 3rem;
+        top: 4rem;
+        height: 8rem;
+    }
+
+    .home-container .content {
+        top: 10rem;
+        left: 1rem;
+    }
+
+    .home-container .content h2 {
+        font-size: 25px;
+    }
+
+    .home-container .content p {
+        font-size: 14px;
+    }
+
+    .home-container .content #abt-me {
+        text-decoration: none;
+        background: blue;
+        height: 35px;
+        width: 110px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .home-container .content .social-icons li a {
+        position: relative;
+        height: 40px;
+        width: 40px;
+        color: inherit;
+        border-radius: 50%;
+        text-decoration: none;
+        background-color: #E1D9D1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.3s;
+    }
+
+    .about-me-container .photo-info-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 70%;
+        margin: auto;
+        gap: 20px;
+        padding-bottom: 20px;
+    }
+
+    .about-me-container .photo-info-container .photo img {
+        position: static;
+        height: 100%;
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .about-me-container .photo-info-container .info .resume {
+        justify-self: center;
+        padding: 7px;
+        color: white;
+        border-radius: 5px;
+        background: blue;
+    }
+
+    .about-me-container .info p {
+        font-size: 10px;
+    }
+
+    */ .skills-container .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-container .grid .skill {
+        padding: 4px;
+    }
+
+    .skills-container .grid .skill .indiv span {
+        font-size: 12px;
+    }
+
+    .get-in-touch-container {
+        min-height: 90vh;
+        background: #e5ecfb;
+        padding-bottom: 1rem;
+
+    }
+
+    .get-in-touch-container .fset {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        min-height: 55vh;
+        max-width: 65vw;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 1rem;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .get-in-touch-container .fset form {
+        width: 100%;
+        padding: 0;
+    }
+
+    .get-in-touch-container .fset form .field {
+        height: 40px;
+        position: relative;
+        width: 100%;
+        margin: 1rem auto;
+    }
+
+    .get-in-touch-container .fset form .message {
+        width: 100%;
+        height: 100px;
+        margin: 1rem auto;
+        display: flex;
+        position: relative;
+    }
+
+
+    .get-in-touch-container .fset .img-box {
+        height: auto;
+        width: 100%;
+    }
+
+    .get-in-touch-container .fset form .submit button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1rem;
+        box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+        font-family: "Poppins", sans-serif;
+        border-style: none;
+        outline: none;
+        border-radius: 5px;
+        padding: 8px 12px;
+        background: blue;
+    }
+
+    .get-in-touch-container .fset form .submit button i {
+        margin-right: 8px;
+        font-size: 1rem;
+    }
+
+    .signature-container .boxes {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .signature-container .boxes .box1,
+    .signature-container .boxes .box2,
+    .signature-container .boxes .box3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .signature-container .boxes .box2 a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .signature-container .boxes .box3 .socials .social-icons {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        gap: 1rem;
+        list-style: none;
+    }
+
+    .education-container .clg {
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+        margin: auto;
+        margin-top: 30px;
+        border: none;
+    }
+
+    .education-container .clg img {
+        /* height: auto; */
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+
+    .projects-container .allcards .indiv-cards {
+        height: 250px;
+        width: 350px;
+        overflow: hidden;
+        border-radius: 1rem;
+        padding: 0 1rem;
+    }
+
+    .projects-container .allcards .indiv-cards .text-cont h3 {
+        font-family: "Poppins";
+        font-weight: 700;
+        font-size: 15px;
+        background-color: #ffe600;
+        padding: 15px;
+    }
+
+    .about-me-container>p:nth-child(1),
+    .skills-container p,
+    .education-container .header,
+    .projects-container h2,
+    .get-in-touch-container h2 {
+        font-size: 26px;
+    }
+}
+
+
+
+html::-webkit-scrollbar {
+    width: .6rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: rgb(235, 202, 245);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #420177;
+}
+
