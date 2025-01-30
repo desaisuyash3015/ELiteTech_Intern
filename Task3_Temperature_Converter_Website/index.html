@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter Website</title>
+    <br>
+   
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>TEMPERATURE CONVERTER🌡️</h>
+        
+        <input type="number" id="temperature" placeholder="Enter Temperature" required>
+        
+        <select id="unit">
+            <option value="Celsius">Degree Celsius</option>
+            <option value="Fahrenheit">Degree Fahrenheit</option>
+        </select>
+
+        <button onclick="convertTemperature()">Convert</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function convertTemperature() {
+            let temp = parseFloat(document.getElementById("temperature").value);
+            let unit = document.getElementById("unit").value;
+            let result = "";
+
+            if (isNaN(temp)) {
+                document.getElementById("result").innerText = "Please enter a valid number!";
+                return;
+            }
+
+            if (unit === "Celsius") {
+                let fahrenheit = (temp * 9/5) + 32;
+                let kelvin = temp + 273.15;
+                result = `${temp}°C = ${fahrenheit.toFixed(2)}°F | ${kelvin.toFixed(2)}K`;
+            } else if (unit === "Fahrenheit") {
+                let celsius = (temp - 32) * 5/9;
+                let kelvin = (temp - 32) * 5/9 + 273.15;
+                result = `${temp}°F = ${celsius.toFixed(2)}°C | ${kelvin.toFixed(2)}K`;
+            }
+
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+    <footer><b>Created by : Suyash Desai</b></footer>
+     
+
+</body>
+</html>
